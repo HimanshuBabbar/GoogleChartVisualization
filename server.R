@@ -1,3 +1,4 @@
+library(shiny)
 shinyServer(function(input, output) {
   
   
@@ -6,6 +7,7 @@ shinyServer(function(input, output) {
     if(input$driver == 1){
       
       paste("This is an example of Google Motion Chart.
+
               CLTV represents the sales acquired by a marketing driver National TV 
               against regions, markets or Sub-DMA's for a calendar year.
             
@@ -16,8 +18,10 @@ shinyServer(function(input, output) {
     } else {
       
       paste("This is an example of Google Geo Chart.
+
               Here the CLTV repesents the aggregated sales for a particular DMA for a 
               marketing driver Spot TV.
+
               Hover on a particular DMA of the US metro map to 
               see the sales data for that area."
             )
@@ -41,7 +45,7 @@ shinyServer(function(input, output) {
 #           "colorOption": Region, "orderedByX" : true
 #       }'
       
-      gvisMotionChart(nCleanData, idvar="Subdma", timevar="Week", xvar = "CLTV", yvar = "CLTV",
+      gvisMotionChart(nationalCleanData, idvar="Subdma", timevar="Week", xvar = "CLTV", yvar = "CLTV",
                       options = list(width=800, height = 500))      
       
     } else{
