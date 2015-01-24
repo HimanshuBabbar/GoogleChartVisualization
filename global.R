@@ -2,10 +2,10 @@ library(shiny)
 library(googleVis) 
 library(lubridate)
 
-nData <- read.csv("national.csv", as.is = T)
+nationalData <- read.csv("nat.csv", as.is = T)
 
-nCleanData <- subset(nData, subset = (Subdma != "Global"))
-nCleanData$Week <- as.Date(mdy_hm(nCleanData$Week))
+nationalCleanData <- subset(nationalData, subset = (Subdma != "Global"))
+nationalCleanData$Week <- as.Date(mdy_hm(nationalCleanData$Week))
 
 
 sData <- read.csv("spot.csv", as.is = T)
