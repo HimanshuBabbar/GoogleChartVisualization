@@ -3,7 +3,7 @@ shinyUI(pageWithSidebar(
   
   
   # Application title
-  headerPanel("Sales Chart"),
+  headerPanel("Sales Data"),
   
   # Sidebar with controls to select the relevant driver
   # Options vary with tab selected
@@ -12,10 +12,10 @@ shinyUI(pageWithSidebar(
     
     selectInput("driver", label=h5("Select a driver to view the sales corresonding to that driver :"),
                                     choices=list(
-                                                 "WI National Tv" = 1, 
+                                                 "WI National TV" = 1, 
 																							   "WI Spot TV" = 2
                                                 ),
-																		selected="1",
+																		selected="2",
                                     multiple=FALSE
                 )
     
